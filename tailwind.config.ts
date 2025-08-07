@@ -24,6 +24,20 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				/* Chat-specific colors */
+				'chat-background': 'hsl(var(--chat-background))',
+				'chat-border': 'hsl(var(--chat-border))',
+				'user-message': 'hsl(var(--user-message))',
+				'user-message-foreground': 'hsl(var(--user-message-foreground))',
+				'bot-message': 'hsl(var(--bot-message))',
+				'bot-message-foreground': 'hsl(var(--bot-message-foreground))',
+				'header-background': 'hsl(var(--header-background))',
+				'header-border': 'hsl(var(--header-border))',
+				'input-background': 'hsl(var(--input-background))',
+				'input-border': 'hsl(var(--input-border))',
+				'input-focus': 'hsl(var(--input-focus))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +98,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'message-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px) scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0) scale(1)'
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'message-in': 'message-in 0.3s ease-out',
+				'fade-in': 'fade-in 0.2s ease-out'
 			}
 		}
 	},
